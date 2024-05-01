@@ -350,7 +350,14 @@ export const useMainStore = defineStore({
     done_daily_survey() {
       if (!this.done_tutorial) return true;
       if (!this.active_doc) return false;
-      if (this.active_doc?.prefs?.skip_survey) return "skipped";
+      if (this.active_doc?.prefs?.skip_survey || process.env.VUE_APP_NOSURVEY) {
+        _status.log(
+          `📃 Skipping survey from {${
+            this.active_doc?.prefs?.skip_survey ? "user prefs" : ".env"
+          }} override`
+        );
+        return "skipped";
+      }
       // if (this.is_teacher) return true;
       return this.active_doc?.done_surveys &amp;&amp; this.active_doc.done_surveys?.includes(today);
     },
@@ -514,6 +521,42 @@ export const useMainStore = defineStore({
    * @namespace .main.actions
    */
   actions: {
+    /**
+     * @memberOf .main.actions
+     * @function report_logs
+     * @description save logs to server for debugging later, with some session data attached
+     * @returns {Promise}
+     */
+    report_logs() {
+      try {
+        // get stream types
+        const streamObj = _status.getStream();
+        const streamText = _status.textStream();
+
+        // write to new firebase doc in db/logs/ and save the ID
+        const docRef = doc(collection(db, "logs"));
+
+        setDoc(docRef, {
+          date: new Date(),
+          user: this.user ? this.user.uid : "no user",
+          email: this.user ? this.user.email : "no user",
+          stream: {
+            json: streamObj,
+            text: streamText,
+          },
+        });
+
+        new SuccessToast("Logs reported and saved locally, check console for details", 3500);
+        _status.log(`📊 Reported logs to serve as '${docRef.id}'`);
+
+        // save to disk
+        void _status.saveStream(docRef.id);
+
+        return Promise.resolve(docRef.id);
+      } catch (err) {
+        return Promise.reject("Failed to report logs:" + err);
+      }
+    },
     /**
      * @memberOf .main.actions
      * @function class_text
