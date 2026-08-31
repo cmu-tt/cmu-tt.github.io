@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" style="font-size:16px"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="../img/icons/favicon-32x32.png"><title>Source: store/index.js</title><!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]--><script src="scripts/third-party/hljs.js" defer="defer"></script><script src="scripts/third-party/hljs-line-num.js" defer="defer"></script><script src="scripts/third-party/popper.js" defer="defer"></script><script src="scripts/third-party/tippy.js" defer="defer"></script><script src="scripts/third-party/tocbot.min.js"></script><script>var baseURL="/",locationPathname="";baseURL=(locationPathname=document.location.pathname).substr(0,locationPathname.lastIndexOf("/")+1)</script><link rel="stylesheet" href="styles/clean-jsdoc-theme.min.css"><svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none"><defs><symbol id="copy-icon" viewbox="0 0 488.3 488.3"><g><path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/><path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/></g></symbol><symbol id="search-icon" viewBox="0 0 512 512"><g><g><path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474    c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323    c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848    S326.847,409.323,225.474,409.323z"/></g></g><g><g><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328    c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></g></g></symbol><symbol id="font-size-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol><symbol id="add-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/></symbol><symbol id="minus-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5 11h14v2H5z"/></symbol><symbol id="dark-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol><symbol id="light-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol><symbol id="reset-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.537 19.567A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10c0 2.136-.67 4.116-1.81 5.74L17 12h3a8 8 0 1 0-2.46 5.772l.997 1.795z"/></symbol><symbol id="down-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"></path></symbol><symbol id="codepen-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.5 13.202L13 15.535v3.596L19.197 15 16.5 13.202zM14.697 12L12 10.202 9.303 12 12 13.798 14.697 12zM20 10.869L18.303 12 20 13.131V10.87zM19.197 9L13 4.869v3.596l3.5 2.333L19.197 9zM7.5 10.798L11 8.465V4.869L4.803 9 7.5 10.798zM4.803 15L11 19.131v-3.596l-3.5-2.333L4.803 15zM4 13.131L5.697 12 4 10.869v2.262zM2 9a1 1 0 0 1 .445-.832l9-6a1 1 0 0 1 1.11 0l9 6A1 1 0 0 1 22 9v6a1 1 0 0 1-.445.832l-9 6a1 1 0 0 1-1.11 0l-9-6A1 1 0 0 1 2 15V9z"/></symbol><symbol id="close-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></symbol><symbol id="menu-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></symbol></defs></svg></head><body data-theme="dark"><div class="sidebar-container"><div class="sidebar" id="sidebar"><a href="/" class="sidebar-title sidebar-title-anchor">Home</a><div class="sidebar-items-container"><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-namespaces"><div>Namespaces</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="magic.html">.magic</a></div><div class="sidebar-section-children"><a href="magic.actions.html">actions</a></div><div class="sidebar-section-children"><a href="magic.getters.html">getters</a></div><div class="sidebar-section-children"><a href="magic.state.html">state</a></div><div class="sidebar-section-children"><a href="main.html">.main</a></div><div class="sidebar-section-children"><a href="main.actions.html">actions</a></div><div class="sidebar-section-children"><a href="main.getters.html">getters</a></div><div class="sidebar-section-children"><a href="main.state.html">state</a></div><div class="sidebar-section-children"><a href="notify.html">.notify</a></div><div class="sidebar-section-children"><a href="notify.actions.html">actions</a></div><div class="sidebar-section-children"><a href="notify.getters.html">getters</a></div><div class="sidebar-section-children"><a href="shortcuts.html">.shortcuts</a></div><div class="sidebar-section-children"><a href="shortcuts.actions.html">actions</a></div><div class="sidebar-section-children"><a href="shortcuts.getters.html">getters</a></div><div class="sidebar-section-children"><a href="common.html">common</a></div><div class="sidebar-section-children"><a href="store.html">store</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-global"><div>Global</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="global.html#_log">_log</a></div><div class="sidebar-section-children"><a href="global.html#_status">_status</a></div><div class="sidebar-section-children"><a href="global.html#_statuslog">_statuslog</a></div><div class="sidebar-section-children"><a href="global.html#compatDateObj">compatDateObj</a></div><div class="sidebar-section-children"><a href="global.html#downloadLogData">downloadLogData</a></div><div class="sidebar-section-children"><a href="global.html#getFirstNonStandardCharacter">getFirstNonStandardCharacter</a></div><div class="sidebar-section-children"><a href="global.html#msToTime">msToTime</a></div><div class="sidebar-section-children"><a href="global.html#save">save</a></div><div class="sidebar-section-children"><a href="global.html#state">state</a></div></div></div></div></div><div class="navbar-container" id="VuAckcnZhf"><nav class="navbar"><div class="navbar-left-items"></div><div class="navbar-right-items"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div><nav></nav></nav></div><div class="toc-container"><div class="toc-content"><span class="bold">On this page</span><div id="eed4d2a0bfd64539bb9df78095dec881"></div></div></div><div class="body-wrapper"><div class="main-content"><div class="main-wrapper"><section id="source-page" class="source-page"><header><h1 id="title" class="has-anchor">store_index.js</h1></header><article><pre class="prettyprint source lang-js"><code>/**
+    <![endif]--><script src="scripts/third-party/hljs.js" defer="defer"></script><script src="scripts/third-party/hljs-line-num.js" defer="defer"></script><script src="scripts/third-party/popper.js" defer="defer"></script><script src="scripts/third-party/tippy.js" defer="defer"></script><script src="scripts/third-party/tocbot.min.js"></script><script>var baseURL="/",locationPathname="";baseURL=(locationPathname=document.location.pathname).substr(0,locationPathname.lastIndexOf("/")+1)</script><link rel="stylesheet" href="styles/clean-jsdoc-theme.min.css"><svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none"><defs><symbol id="copy-icon" viewbox="0 0 488.3 488.3"><g><path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/><path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/></g></symbol><symbol id="search-icon" viewBox="0 0 512 512"><g><g><path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474    c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323    c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848    S326.847,409.323,225.474,409.323z"/></g></g><g><g><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328    c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></g></g></symbol><symbol id="font-size-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol><symbol id="add-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/></symbol><symbol id="minus-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5 11h14v2H5z"/></symbol><symbol id="dark-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol><symbol id="light-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol><symbol id="reset-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.537 19.567A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10c0 2.136-.67 4.116-1.81 5.74L17 12h3a8 8 0 1 0-2.46 5.772l.997 1.795z"/></symbol><symbol id="down-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"></path></symbol><symbol id="codepen-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.5 13.202L13 15.535v3.596L19.197 15 16.5 13.202zM14.697 12L12 10.202 9.303 12 12 13.798 14.697 12zM20 10.869L18.303 12 20 13.131V10.87zM19.197 9L13 4.869v3.596l3.5 2.333L19.197 9zM7.5 10.798L11 8.465V4.869L4.803 9 7.5 10.798zM4.803 15L11 19.131v-3.596l-3.5-2.333L4.803 15zM4 13.131L5.697 12 4 10.869v2.262zM2 9a1 1 0 0 1 .445-.832l9-6a1 1 0 0 1 1.11 0l9 6A1 1 0 0 1 22 9v6a1 1 0 0 1-.445.832l-9 6a1 1 0 0 1-1.11 0l-9-6A1 1 0 0 1 2 15V9z"/></symbol><symbol id="close-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></symbol><symbol id="menu-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></symbol></defs></svg></head><body data-theme="dark"><div class="sidebar-container"><div class="sidebar" id="sidebar"><div class="sidebar-items-container"><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-modules"><div>Modules</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="module-common_dualRead.html">common/dualRead</a></div><div class="sidebar-section-children"><a href="module-common_paths.html">common/paths</a></div><div class="sidebar-section-children"><a href="module-common_share.html">common/share</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-namespaces"><div>Namespaces</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="magic.html">.magic</a></div><div class="sidebar-section-children"><a href="magic.actions.html">actions</a></div><div class="sidebar-section-children"><a href="magic.getters.html">getters</a></div><div class="sidebar-section-children"><a href="magic.state.html">state</a></div><div class="sidebar-section-children"><a href="main.html">.main</a></div><div class="sidebar-section-children"><a href="main.actions.html">actions</a></div><div class="sidebar-section-children"><a href="main.getters.html">getters</a></div><div class="sidebar-section-children"><a href="main.state.html">state</a></div><div class="sidebar-section-children"><a href="notify.html">.notify</a></div><div class="sidebar-section-children"><a href="notify.actions.html">actions</a></div><div class="sidebar-section-children"><a href="notify.getters.html">getters</a></div><div class="sidebar-section-children"><a href="shortcuts.html">.shortcuts</a></div><div class="sidebar-section-children"><a href="shortcuts.actions.html">actions</a></div><div class="sidebar-section-children"><a href="shortcuts.getters.html">getters</a></div><div class="sidebar-section-children"><a href="common.html">common</a></div><div class="sidebar-section-children"><a href="store.html">store</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-global"><div>Global</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="global.html#GRAPHEME_FALLBACK">GRAPHEME_FALLBACK</a></div><div class="sidebar-section-children"><a href="global.html#_log">_log</a></div><div class="sidebar-section-children"><a href="global.html#_status">_status</a></div><div class="sidebar-section-children"><a href="global.html#_statuslog">_statuslog</a></div><div class="sidebar-section-children"><a href="global.html#classSquareGlyph">classSquareGlyph</a></div><div class="sidebar-section-children"><a href="global.html#classTextName">classTextName</a></div><div class="sidebar-section-children"><a href="global.html#compatDateObj">compatDateObj</a></div><div class="sidebar-section-children"><a href="global.html#downloadLogData">downloadLogData</a></div><div class="sidebar-section-children"><a href="global.html#firstGrapheme">firstGrapheme</a></div><div class="sidebar-section-children"><a href="global.html#getFirstNonStandardCharacter">getFirstNonStandardCharacter</a></div><div class="sidebar-section-children"><a href="global.html#graphemes">graphemes</a></div><div class="sidebar-section-children"><a href="global.html#isEmojiGrapheme">isEmojiGrapheme</a></div><div class="sidebar-section-children"><a href="global.html#msToTime">msToTime</a></div><div class="sidebar-section-children"><a href="global.html#redirectToShortViewIfNeeded">redirectToShortViewIfNeeded</a></div><div class="sidebar-section-children"><a href="global.html#resolveShortViewRef">resolveShortViewRef</a></div><div class="sidebar-section-children"><a href="global.html#save">save</a></div><div class="sidebar-section-children"><a href="global.html#shortViewFromSlashPath">shortViewFromSlashPath</a></div><div class="sidebar-section-children"><a href="global.html#splitLeadingEmoji">splitLeadingEmoji</a></div><div class="sidebar-section-children"><a href="global.html#state">state</a></div></div></div></div></div><div class="navbar-container" id="VuAckcnZhf"><nav class="navbar"><div class="navbar-left-items"></div><div class="navbar-right-items"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div><nav></nav></nav></div><div class="toc-container"><div class="toc-content"><span class="bold">On this page</span><div id="eed4d2a0bfd64539bb9df78095dec881"></div></div></div><div class="body-wrapper"><div class="main-content"><div class="main-wrapper"><section id="source-page" class="source-page"><header><h1 id="title" class="has-anchor">store_index.js</h1></header><article><pre class="prettyprint source lang-js"><code>/**
  * Group of stores that handle page-inspecific data and methods
  * @namespace store
  */
@@ -40,6 +40,9 @@ export var Theme;
 // setup Pinia store
 import { defineStore } from "pinia";
 import { _status, compatDateObj } from "@/common";
+import { classTextName } from "@/common/grapheme";
+import { classPath, humanTeachers, isCanvasImportEmail, parseClassId, parseTaskId, shortShareRef, splitRefSegments, taskPath as buildTaskPath, } from "@/common/paths";
+import { flatClassExists, getClassDoc, getTaskDoc, rememberClassEmail, } from "@/common/dualRead";
 import { Toast, ErrorToast, cleanError, WarningToast, SuccessToast } from "@svonk/util";
 // get firebase requirements
 import { collection, doc, setDoc, getDoc, getDocs, addDoc, writeBatch, updateDoc, deleteDoc, } from "firebase/firestore";
@@ -49,15 +52,23 @@ import { signInWithPopup, GoogleAuthProvider, signInWithRedirect } from "firebas
 const provider = new GoogleAuthProvider();
 const isElectron = ((_b = (_a = navigator === null || navigator === void 0 ? void 0 : navigator.userAgent) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === null || _b === void 0 ? void 0 : _b.indexOf(" electron/")) > -1;
 let ORG_DOMAIN = `@${process.env.VUE_APP_ORG_DOMAIN}`;
-// add email and name to provider
+// add email and name to provider (safe at import time — does not touch `auth`)
 provider.addScope("email");
 provider.addScope("profile");
-auth.useDeviceLanguage();
 // constrict to only ORG_DOMAIN emails
 provider.setCustomParameters({
     login_hint: "username" + ORG_DOMAIN,
     // hd: ORG_DOMAIN,
 });
+// Do NOT call auth.useDeviceLanguage() at module top level — store↔firebase ESM cycle
+// leaves `auth` in TDZ during import. Configure lazily on first login.
+let authLanguageConfigured = false;
+function ensureAuthLanguage() {
+    if (authLanguageConfigured)
+        return;
+    auth.useDeviceLanguage();
+    authLanguageConfigured = true;
+}
 // setup class name handlebars template
 import Handlebars from "handlebars";
 const CLASS_TEXT = Handlebars.compile(process.env.VUE_APP_MUSTACHE_CLASS_TEXT || "{{#period}}P{{period}} - {{/period}}{{name}}");
@@ -347,12 +358,12 @@ export const useMainStore = defineStore({
          * @default false
          */
         is_teacher() {
-            var _a, _b, _c, _d;
+            var _a, _b, _d, _e;
             // check if email is a teacher email (ends in this.ORG_DOMAIN) &amp;&amp; has letters in the first part
             if (!this.user)
                 return false;
             if (((_a = this.active_doc) === null || _a === void 0 ? void 0 : _a.teacher_mode) == true || ((_b = window === null || window === void 0 ? void 0 : window.localStorage) === null || _b === void 0 ? void 0 : _b[`${process.env.VUE_APP_BRAND_NAME_SHORT}_teacher_mode`]) == "true") {
-                if (((_c = this.active_doc) === null || _c === void 0 ? void 0 : _c.teacher_mode) == true || ((_d = this.active_doc) === null || _d === void 0 ? void 0 : _d.teacher_mode) == null) {
+                if (((_d = this.active_doc) === null || _d === void 0 ? void 0 : _d.teacher_mode) == true || ((_e = this.active_doc) === null || _e === void 0 ? void 0 : _e.teacher_mode) == null) {
                     window.localStorage.setItem(`${process.env.VUE_APP_BRAND_NAME_SHORT}_teacher_mode`, "true");
                     if (this.personal_account) {
                         _status.log("🏫 No teacher mode for personal account");
@@ -389,17 +400,17 @@ export const useMainStore = defineStore({
          * @note Returns true if user is a teacher, since we're not tracking data for them
          */
         done_daily_survey() {
-            var _a, _b, _c, _d, _e, _f;
+            var _a, _b, _d, _e, _f, _g;
             if (!this.done_tutorial)
                 return true;
             if (!this.active_doc)
                 return false;
             if (((_b = (_a = this.active_doc) === null || _a === void 0 ? void 0 : _a.prefs) === null || _b === void 0 ? void 0 : _b.skip_survey) || process.env.VUE_APP_NOSURVEY) {
-                _status.log(`📃 Skipping survey from {${((_d = (_c = this.active_doc) === null || _c === void 0 ? void 0 : _c.prefs) === null || _d === void 0 ? void 0 : _d.skip_survey) ? "user prefs" : ".env"}} override`);
+                _status.log(`📃 Skipping survey from {${((_e = (_d = this.active_doc) === null || _d === void 0 ? void 0 : _d.prefs) === null || _e === void 0 ? void 0 : _e.skip_survey) ? "user prefs" : ".env"}} override`);
                 return "skipped";
             }
             // if (this.is_teacher) return true;
-            return ((_e = this.active_doc) === null || _e === void 0 ? void 0 : _e.done_surveys) &amp;&amp; ((_f = this.active_doc.done_surveys) === null || _f === void 0 ? void 0 : _f.includes(today));
+            return ((_f = this.active_doc) === null || _f === void 0 ? void 0 : _f.done_surveys) &amp;&amp; ((_g = this.active_doc.done_surveys) === null || _g === void 0 ? void 0 : _g.includes(today));
         },
         /**
          * @memberOf .main.getters
@@ -619,7 +630,8 @@ export const useMainStore = defineStore({
         class_text(class_obj) {
             if (!class_obj)
                 return;
-            return CLASS_TEXT(class_obj);
+            // Strip leading emoji from a copy so class squares don't repeat it in lists
+            return CLASS_TEXT(Object.assign(Object.assign({}, class_obj), { name: classTextName(class_obj.name) }));
         },
         /**
          * @memberOf .main.actions
@@ -689,7 +701,7 @@ export const useMainStore = defineStore({
          */
         get_cached_surveys(dates_1) {
             return __awaiter(this, arguments, void 0, function* (dates, force_refresh = false) {
-                var _a, _b, _c;
+                var _a, _b, _d;
                 if (!this.user)
                     return Promise.reject("Missing user");
                 try {
@@ -699,7 +711,7 @@ export const useMainStore = defineStore({
                     const current = current_get.exists() ? ((_b = current_get.data()) === null || _b === void 0 ? void 0 : _b.list) || [] : [];
                     // get array of all the dates by mapping
                     const current_dates = current === null || current === void 0 ? void 0 : current.map((e) => e.date);
-                    const errored_dates = ((_c = current === null || current === void 0 ? void 0 : current.filter((e) => e.error)) === null || _c === void 0 ? void 0 : _c.map((e) => e.date)) || [];
+                    const errored_dates = ((_d = current === null || current === void 0 ? void 0 : current.filter((e) => e.error)) === null || _d === void 0 ? void 0 : _d.map((e) => e.date)) || [];
                     // check if current_dates includes all the dates
                     const all_dates = dates.every((e) => current_dates.includes(e));
                     // if has all, return the cashed data
@@ -841,16 +853,34 @@ export const useMainStore = defineStore({
             const path = [...args].join("/");
             if (!path.length)
                 return null;
-            let [_email, _id, task_id] = path.split("/");
-            if (!_email || !_id)
-                return null;
-            _email = _email.split("@")[0];
-            return task_id ? `${_email}~${_id}~${task_id}` : `${_email}~${_id}`;
+            const parts = splitRefSegments(path);
+            if (parts.length === 1) {
+                // Already classId-only — emit short share form
+                return shortShareRef(parts[0]);
+            }
+            if (parts.length === 2) {
+                const [a, b] = parts;
+                if (a.includes("@") || a.includes(this.ORG_DOMAIN.replace("@", ""))) {
+                    // email/classId → short classId (preferred share form)
+                    rememberClassEmail(b, a.includes("@") ? a : a + this.ORG_DOMAIN);
+                    return shortShareRef(b);
+                }
+                // classId/taskId → short classId~taskId
+                return shortShareRef(a, b);
+            }
+            if (parts.length >= 3) {
+                const [emailPart, classId, taskId] = parts;
+                const email = emailPart.includes("@") ? emailPart : emailPart + this.ORG_DOMAIN;
+                rememberClassEmail(classId, email);
+                return shortShareRef(classId, taskId);
+            }
+            return null;
         },
         /**
          * @memberOf .main.actions
          * @function ref_to_path
-         * @description Convert a ref to a path (email/class_id?/task_id)
+         * @description Convert a ref to a nested path (email/class_id?/task_id) when email is known.
+         * Short classId-only refs resolve email via dual-read cache when possible.
          * @param {String} path The path to convert
          * @returns {String} The ref (email/class_id?/task_id)
          * @default null
@@ -860,11 +890,26 @@ export const useMainStore = defineStore({
             const ref = [...args].join("~");
             if (!ref.length)
                 return null;
-            let [_email, _id, task_id] = ref.split("~");
-            if (!_email || !_id)
-                return null;
-            _email += this.ORG_DOMAIN;
-            return task_id ? `${_email}/${_id}/${task_id}` : `${_email}/${_id}`;
+            const taskParsed = parseTaskId(ref, this.ORG_DOMAIN);
+            if (taskParsed) {
+                const email = taskParsed.teacherEmail;
+                if (email)
+                    return buildTaskPath(email, taskParsed.classId, taskParsed.taskId);
+                // Short classId~taskId — cannot build nested path without email
+                return `${taskParsed.classId}/${taskParsed.taskId}`;
+            }
+            const classParsed = parseClassId(ref, this.ORG_DOMAIN);
+            if (classParsed) {
+                if (classParsed.teacherEmail) {
+                    return classPath(classParsed.teacherEmail, classParsed.classId);
+                }
+                return classParsed.classId;
+            }
+            return null;
+        },
+        /** Short share/view ref for a class (and optional task), dropping email prefix. */
+        short_share_ref(classId, taskId) {
+            return shortShareRef(classId, taskId);
         },
         /**
          * @memberOf .main.actions
@@ -889,26 +934,35 @@ export const useMainStore = defineStore({
                 try {
                     if (!ref)
                         return Promise.reject("No ref provided");
-                    // fix ref to be in email@ORG_DOMAIN/uid
-                    // - fix for different formats
-                    ref = ref.split("~").join("/");
-                    // - remove domain from email and re-add
-                    let [_email, _id] = ref.split("/");
-                    if (!_email || !_id)
-                        return Promise.reject("Invalid ref");
-                    _email = _email.split("@")[0] + this.ORG_DOMAIN;
+                    // Resolve to nested email/classId for codes + nested write
+                    const parsed = parseClassId(ref, this.ORG_DOMAIN);
+                    let _email = parsed === null || parsed === void 0 ? void 0 : parsed.teacherEmail;
+                    let _id = parsed === null || parsed === void 0 ? void 0 : parsed.classId;
+                    if (!_email &amp;&amp; _id) {
+                        const resolved = yield getClassDoc(db, _id);
+                        _email = resolved === null || resolved === void 0 ? void 0 : resolved.teacherEmail;
+                    }
+                    if (!_email || !_id) {
+                        // Legacy slash fallback
+                        ref = ref.split("~").join("/");
+                        let parts = ref.split("/");
+                        if (parts.length &lt; 2)
+                            return Promise.reject("Invalid ref");
+                        _email = parts[0].split("@")[0] + this.ORG_DOMAIN;
+                        _id = parts[1];
+                    }
                     ref = _email + "/" + _id;
                     // get code
                     const code = this.hash(ref);
                     // check if class object already has code in this.classes
-                    const class_obj = this.classes.find((e) => e.id == ref);
+                    const class_obj = this.classes.find((e) => e.id == ref || e._class_id == _id || (typeof e.id === "string" &amp;&amp; e.id.endsWith("/" + _id)));
                     if (!class_obj)
                         return Promise.reject("No matching class found");
                     if ((class_obj === null || class_obj === void 0 ? void 0 : class_obj.code) !== code) {
                         // add ref to code doc
                         const code_ref = doc(db, "codes", code);
                         yield setDoc(code_ref, { ref: ref });
-                        // add code to class doc
+                        // add code to class doc (nested writer path)
                         const class_ref = doc(db, "classes", _email, "classes", _id);
                         yield updateDoc(class_ref, { code: code });
                     }
@@ -983,7 +1037,7 @@ export const useMainStore = defineStore({
          */
         get_tasks() {
             return __awaiter(this, void 0, void 0, function* () {
-                var _a, _b, _c, _d, _e;
+                var _a, _b, _d, _e, _f;
                 try {
                     if (!((_a = this.classes) === null || _a === void 0 ? void 0 : _a.length))
                         return Promise.resolve([]);
@@ -1000,8 +1054,8 @@ export const useMainStore = defineStore({
                             let date;
                             if (typeof class_tasks[j].date == "string") {
                                 // convert to mm-dd-yyyy from yyyy-mm-dd if needed
-                                class_tasks[j].date = (_c = (_b = class_tasks[j]) === null || _b === void 0 ? void 0 : _b.date) === null || _c === void 0 ? void 0 : _c.split("T")[0];
-                                let [year, month, day] = (_e = (_d = class_tasks[j]) === null || _d === void 0 ? void 0 : _d.date) === null || _e === void 0 ? void 0 : _e.split("-");
+                                class_tasks[j].date = (_d = (_b = class_tasks[j]) === null || _b === void 0 ? void 0 : _b.date) === null || _d === void 0 ? void 0 : _d.split("T")[0];
+                                let [year, month, day] = (_f = (_e = class_tasks[j]) === null || _e === void 0 ? void 0 : _e.date) === null || _f === void 0 ? void 0 : _f.split("-");
                                 // TODO: track down root of issue where dates are interpreted twice &amp; thus may switch formats w/o hotfix;
                                 if (year.length == 4) {
                                     class_tasks[j].date = `${month}-${day}-${year}`;
@@ -1014,7 +1068,13 @@ export const useMainStore = defineStore({
                             }
                             // set color from parent class color
                             class_tasks[j].color = classes[i].color;
-                            tasks.push(Object.assign(Object.assign({}, class_tasks[j]), { date: date, class_name: this.class_text(classes[i]) }));
+                            const classTask = class_tasks[j];
+                            let ref = classTask.ref;
+                            if (!ref &amp;&amp; classTask.id) {
+                                const [_email, _cid] = classes[i].ref.split("/");
+                                ref = [_email, _cid, classTask.id].join("/");
+                            }
+                            tasks.push(Object.assign(Object.assign(Object.assign({}, classTask), { date: date, class_name: this.class_text(classes[i]), class_id: classes[i].id }), (ref ? { ref } : {})));
                         }
                     }
                     // sort tasks by day, if day the same, sort by period, then by name
@@ -1047,7 +1107,7 @@ export const useMainStore = defineStore({
          * @note Imperfect, and isn't enough to prevent errors when the app updates to a version with a different store state structure
          */
         clear() {
-            var _a, _b, _c;
+            var _a, _b, _d;
             this.user = null;
             this.account_doc = null;
             this.linked_account_doc = null;
@@ -1062,7 +1122,7 @@ export const useMainStore = defineStore({
             };
             window.localStorage.removeItem(`${process.env.VUE_APP_BRAND_NAME_SHORT}_app_state`);
             // if page requires auth, redirect to home
-            if ((_c = (_b = (_a = router.currentRoute) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.meta) === null || _c === void 0 ? void 0 : _c.requiresAuth) {
+            if ((_d = (_b = (_a = router.currentRoute) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.meta) === null || _d === void 0 ? void 0 : _d.requiresAuth) {
                 router.push("/");
             }
         },
@@ -1154,29 +1214,29 @@ export const useMainStore = defineStore({
         /**
          * @memberOf .main.actions
          * @function invite_linked
-         * @description Invite a user account to link to another user's account (for personal accounts only,) including sending them an email with the code to join
+         * @description Invite a personal email to link to this school account via callable inviteLinkedAccount (server queues link_invite mail and updates users.linked)
          * @param {String} email The email of the user to invite (and send an invite email to)
          * @returns {Promise} A promise that resolves to nothing or rejects with an {String} error
          */
         invite_linked(email) {
             return __awaiter(this, void 0, void 0, function* () {
-                var _a, _b, _c, _d, _e, _f, _g, _h;
                 if (!this.user || !this.active_doc || !this.account_doc)
                     return;
                 if (this.personal_account) {
                     new WarningToast("This account is already linked!", 2000);
                 }
-                // exclude empty or mvla emails
+                // exclude empty or org emails
                 if (!email || validOrgAcc(email) || !email.includes("@")) {
                     new WarningToast(`Please enter a valid non-${process.env.VUE_APP_ORG_NAME} email`, 2000);
                     return;
                 }
-                // check if email is already linked (has entry with matching .email)
+                email = email.trim().toLowerCase();
+                // check if email is already linked
                 if (this.linked_accounts.includes(email)) {
                     new WarningToast("That account is already linked", 2000);
                     return;
                 }
-                // add to doc.linked
+                // ensure local linked array exists for UI update after success
                 if (!this.active_doc.linked) {
                     if (this.personal_account &amp;&amp; this.linked_account_doc) {
                         this.linked_account_doc.linked = [];
@@ -1185,49 +1245,24 @@ export const useMainStore = defineStore({
                         this.account_doc.linked = [];
                     }
                 }
-                // add email to queue
-                const email_queue = collection(db, "mail");
                 try {
-                    const sent_email = yield addDoc(email_queue, {
-                        to: email,
-                        cc: this.user.email,
-                        from: `${this.active_doc.name} via ${process.env.VUE_APP_BRAND_NAME_LONG} &lt;${process.env.VUE_APP_BRAND_MAIL_ADDRESS}>`,
-                        fromname: this.active_doc.name + ` via ${process.env.VUE_APP_BRAND_NAME_LONG}`,
-                        template: {
-                            name: "link_invite",
-                            data: {
-                                sender_name: this.active_doc.name.split(" ")[0],
-                                sender_uid: this.user.uid,
-                            },
-                        },
-                    });
-                    // wait for the email document to have keys .delivery.attempts > 0 and .delivery.error == null
-                    const email_doc_ref = doc(email_queue, sent_email.id);
-                    let email_doc = yield getDoc(email_doc_ref);
-                    let checks = 1;
-                    while (!email_doc.exists() || (!!((_b = (_a = email_doc.data()) === null || _a === void 0 ? void 0 : _a.delivery) === null || _b === void 0 ? void 0 : _b.attempts) == 0 &amp;&amp; checks &lt;= 3)) {
-                        yield new Promise((resolve) => setTimeout(resolve, (2 ^ checks) * 2000));
-                        email_doc = yield getDoc(email_doc_ref);
-                        _status.log("📧 Checked email doc");
-                        checks++;
-                    }
-                    if (!((_f = (_e = (_d = (_c = email_doc.data()) === null || _c === void 0 ? void 0 : _c.delivery) === null || _d === void 0 ? void 0 : _d.info) === null || _e === void 0 ? void 0 : _e.accepted) === null || _f === void 0 ? void 0 : _f.includes(email)) || ((_h = (_g = email_doc.data()) === null || _g === void 0 ? void 0 : _g.delivery) === null || _h === void 0 ? void 0 : _h.attempts) == 0) {
-                        _status.log("📧 Email failed to send", email_doc.data());
-                        throw "Email failed to send";
-                    }
-                    // update remote
+                    const inviteLinkedAccount = httpsCallable(functions, "inviteLinkedAccount");
+                    const result = yield inviteLinkedAccount({ email });
+                    const data = result.data;
+                    if (data.error)
+                        throw data.error;
+                    // Server already arrayUnions onto users.linked; mirror locally for UI
                     if (this.personal_account &amp;&amp; this.linked_account_doc) {
                         this.linked_account_doc.linked.push(email);
                     }
                     else {
                         this.account_doc.linked.push(email);
                     }
-                    yield this.update_remote();
                     new SuccessToast(`We notified ${email}, you'll receive a copy of the email too!`, 4000);
                     return Promise.resolve();
                 }
                 catch (err) {
-                    new ErrorToast(`Couldn't invite "${email}"`, err, 2000);
+                    new ErrorToast(`Couldn't invite "${email}"`, cleanError(err), 2000);
                     return Promise.reject(err);
                 }
             });
@@ -1364,7 +1399,7 @@ export const useMainStore = defineStore({
          */
         save_daily_survey(responses) {
             return __awaiter(this, void 0, void 0, function* () {
-                var _a, _b, _c;
+                var _a, _b, _d;
                 // save responses in /survey/daily/{date}/{uid}
                 try {
                     // wait for user login
@@ -1376,7 +1411,7 @@ export const useMainStore = defineStore({
                         responses: responses,
                     });
                     // update user doc to have date in "done_surveys"
-                    let updated_surveys = ((_c = this.active_doc) === null || _c === void 0 ? void 0 : _c.done_surveys) ? this.active_doc.done_surveys : [];
+                    let updated_surveys = ((_d = this.active_doc) === null || _d === void 0 ? void 0 : _d.done_surveys) ? this.active_doc.done_surveys : [];
                     updated_surveys.push(today);
                     if (this.personal_account &amp;&amp; this.linked_account_doc) {
                         this.linked_account_doc.done_surveys = updated_surveys;
@@ -1512,7 +1547,7 @@ export const useMainStore = defineStore({
             // load user doc to check .personal_account
             getDoc(doc(db, "users", user.uid))
                 .then((userDoc) => {
-                var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q;
+                var _a, _b, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _u;
                 if (userDoc.exists()) {
                     this.account_doc = userDoc.data();
                     this.personal_account = (_a = this.account_doc) === null || _a === void 0 ? void 0 : _a.personal_account;
@@ -1522,7 +1557,7 @@ export const useMainStore = defineStore({
                     this.linked_account_doc = null;
                 }
                 if (!user.email ||
-                    (!validOrgAcc(user.email) &amp;&amp; !(this.personal_account &amp;&amp; (((_c = (_b = router === null || router === void 0 ? void 0 : router.currentRoute) === null || _b === void 0 ? void 0 : _b.value) === null || _c === void 0 ? void 0 : _c.name) == "link" || (((_d = this.account_doc) === null || _d === void 0 ? void 0 : _d.personal_account) &amp;&amp; ((_e = this.account_doc) === null || _e === void 0 ? void 0 : _e.linked_to)))))) {
+                    (!validOrgAcc(user.email) &amp;&amp; !(this.personal_account &amp;&amp; (((_d = (_b = router === null || router === void 0 ? void 0 : router.currentRoute) === null || _b === void 0 ? void 0 : _b.value) === null || _d === void 0 ? void 0 : _d.name) == "link" || (((_e = this.account_doc) === null || _e === void 0 ? void 0 : _e.personal_account) &amp;&amp; ((_f = this.account_doc) === null || _f === void 0 ? void 0 : _f.linked_to)))))) {
                     auth.signOut();
                     new WarningToast(`Please use your ${process.env.VUE_APP_ORG_NAME} (@${process.env.VUE_APP_ORG_DOMAIN}) email to log in, or use an account that has been linked`, 4000);
                     this.clear();
@@ -1536,12 +1571,12 @@ export const useMainStore = defineStore({
                 // if teacher, setup this.teacher refs
                 if (this.is_teacher) {
                     _status.log("🏫 In teacher mode");
-                    this.teacher.doc_ref = doc(db, "classes", (_f = this.user) === null || _f === void 0 ? void 0 : _f.email);
+                    this.teacher.doc_ref = doc(db, "classes", (_g = this.user) === null || _g === void 0 ? void 0 : _g.email);
                     this.teacher.collection_ref = collection(this.teacher.doc_ref, "classes");
                 }
                 // if router has a redirect, go to it
-                if (((_j = (_h = (_g = router.currentRoute) === null || _g === void 0 ? void 0 : _g.value) === null || _h === void 0 ? void 0 : _h.query) === null || _j === void 0 ? void 0 : _j.redirect) &amp;&amp; !((_m = (_l = (_k = router.currentRoute) === null || _k === void 0 ? void 0 : _k.value) === null || _l === void 0 ? void 0 : _l.meta) === null || _m === void 0 ? void 0 : _m.blockStandardRedirect)) {
-                    router.replace((_q = (_p = (_o = router.currentRoute) === null || _o === void 0 ? void 0 : _o.value) === null || _p === void 0 ? void 0 : _p.query) === null || _q === void 0 ? void 0 : _q.redirect);
+                if (((_k = (_j = (_h = router.currentRoute) === null || _h === void 0 ? void 0 : _h.value) === null || _j === void 0 ? void 0 : _j.query) === null || _k === void 0 ? void 0 : _k.redirect) &amp;&amp; !((_o = (_m = (_l = router.currentRoute) === null || _l === void 0 ? void 0 : _l.value) === null || _m === void 0 ? void 0 : _m.meta) === null || _o === void 0 ? void 0 : _o.blockStandardRedirect)) {
+                    router.replace((_u = (_q = (_p = router.currentRoute) === null || _p === void 0 ? void 0 : _p.value) === null || _q === void 0 ? void 0 : _q.query) === null || _u === void 0 ? void 0 : _u.redirect);
                 }
             })
                 .catch((err) => {
@@ -1567,6 +1602,7 @@ export const useMainStore = defineStore({
         login() {
             return __awaiter(this, void 0, void 0, function* () {
                 // TODO: TS rewrite this to use async/await and return a promise
+                ensureAuthLanguage();
                 // check that we dont have a useragent that will be blocked by google (Instagram)
                 const disallowedAgents = ["Instagram"];
                 if (disallowedAgents.some((agent) => {
@@ -1580,13 +1616,13 @@ export const useMainStore = defineStore({
                 // if electron, use redirect, otherwise, use popup
                 yield (isElectron || isIFrame() ? signInWithRedirect(auth, provider) : signInWithPopup(auth, provider))
                     .then(() => {
-                    var _a, _b, _c, _d, _e, _f;
+                    var _a, _b, _d, _e, _f, _g;
                     if (!this.user || !this.user.email || !validOrgAcc(this.user.email))
                         return;
                     new Toast("Logged in as " + this.user.displayName + "!", "default", 2000, require("@svonk/util/assets/info-unlocked-icon.svg"));
                     _status.log("🔑 Logged in as " + this.user.displayName);
                     authChangeAction(this.user);
-                    if (!((_c = (_b = (_a = router.currentRoute) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.query) === null || _c === void 0 ? void 0 : _c.redirect) &amp;&amp; !((_f = (_e = (_d = router.currentRoute) === null || _d === void 0 ? void 0 : _d.value) === null || _e === void 0 ? void 0 : _e.meta) === null || _f === void 0 ? void 0 : _f.blockStandardRedirect)) {
+                    if (!((_d = (_b = (_a = router.currentRoute) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.query) === null || _d === void 0 ? void 0 : _d.redirect) &amp;&amp; !((_g = (_f = (_e = router.currentRoute) === null || _e === void 0 ? void 0 : _e.value) === null || _f === void 0 ? void 0 : _f.meta) === null || _g === void 0 ? void 0 : _g.blockStandardRedirect)) {
                         router.push("/portal");
                     }
                     return Promise.resolve();
@@ -1615,6 +1651,7 @@ export const useMainStore = defineStore({
         login_personal() {
             return __awaiter(this, void 0, void 0, function* () {
                 // TODO: TS rewrite this to use async/await and return a promise
+                ensureAuthLanguage();
                 new Toast("Opening login popup...", "default", 1000, require("@svonk/util/assets/info-locked-icon.svg"));
                 // create new provider with no hd
                 const personal_provider = new GoogleAuthProvider();
@@ -1645,8 +1682,8 @@ export const useMainStore = defineStore({
          */
         logout() {
             return __awaiter(this, void 0, void 0, function* () {
-                var _a, _b, _c;
-                if ((_c = (_b = (_a = router.currentRoute) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.meta) === null || _c === void 0 ? void 0 : _c.requiresAuth) {
+                var _a, _b, _d;
+                if ((_d = (_b = (_a = router.currentRoute) === null || _a === void 0 ? void 0 : _a.value) === null || _b === void 0 ? void 0 : _b.meta) === null || _d === void 0 ? void 0 : _d.requiresAuth) {
                     yield router.push({ path: "/" });
                 }
                 auth.signOut();
@@ -1797,15 +1834,15 @@ export const useMainStore = defineStore({
          */
         create_teacher_doc() {
             return __awaiter(this, void 0, void 0, function* () {
-                var _a, _b, _c, _d, _e, _f;
+                var _a, _b, _d, _e, _f, _g;
                 const email = ((_a = this.active_doc) === null || _a === void 0 ? void 0 : _a.email) || ((_b = this.user) === null || _b === void 0 ? void 0 : _b.email);
                 if (!email)
                     return;
                 // create teacher doc under (classes/teacher_email+this.ORG_DOMAIN) with sub-collection (classes)
                 let teacher_ref = doc(db, "classes", email);
                 yield setDoc(teacher_ref, {
-                    name: ((_c = this.active_doc) === null || _c === void 0 ? void 0 : _c.name) || ((_d = this.user) === null || _d === void 0 ? void 0 : _d.displayName),
-                    email: ((_e = this.active_doc) === null || _e === void 0 ? void 0 : _e.email) || ((_f = this.user) === null || _f === void 0 ? void 0 : _f.email),
+                    name: ((_d = this.active_doc) === null || _d === void 0 ? void 0 : _d.name) || ((_e = this.user) === null || _e === void 0 ? void 0 : _e.displayName),
+                    email: ((_f = this.active_doc) === null || _f === void 0 ? void 0 : _f.email) || ((_g = this.user) === null || _g === void 0 ? void 0 : _g.email),
                 });
                 this.teacher = {
                     doc_ref: teacher_ref,
@@ -1827,7 +1864,7 @@ export const useMainStore = defineStore({
          */
         fetch_classes() {
             return __awaiter(this, void 0, void 0, function* () {
-                var _a, _b, _c;
+                var _a, _b, _d;
                 let run_hash = Math.random().toString(36).substring(7);
                 _status.log(`📚 Started fetch   | &lt;${run_hash}>`);
                 // check for duplicates
@@ -1838,7 +1875,7 @@ export const useMainStore = defineStore({
                         yield new Promise((resolve) => setTimeout(resolve, len));
                         i++;
                     }
-                    if (!((_c = this.active_doc) === null || _c === void 0 ? void 0 : _c.classes)) {
+                    if (!((_d = this.active_doc) === null || _d === void 0 ? void 0 : _d.classes)) {
                         return Promise.reject("Classes not found in user doc within load cycle");
                     }
                     else if (i * len >= warn) {
@@ -1858,32 +1895,36 @@ export const useMainStore = defineStore({
                     new WarningToast("Removed duplicate classes", 2000);
                     _status.log("📚 Removed duplicate classes");
                 }
-                // get all classes' data and combine into an array
+                // get all classes' data and combine into an array (dual-read: flat first, nested fallback)
                 let classes = [];
                 for (let class_path of this.active_doc.classes) {
-                    // split class path into teacher/uid
-                    let [teacher, class_id] = class_path.split("/");
-                    if (!teacher || !class_id) {
+                    // split class path into teacher/uid (or bare classId)
+                    const parts = (class_path || "").split("/").filter(Boolean);
+                    const teacher = parts.length >= 2 ? parts[0] : undefined;
+                    const class_id = parts.length >= 2 ? parts[1] : parts[0];
+                    if (!class_id) {
                         yield this.remove_invalid(class_path);
                         continue;
                     }
-                    // get classes sub-collection from teacher's doc
-                    const teacher_classes = collection(db, "classes", teacher, "classes");
-                    if (!teacher_classes) {
-                        yield this.remove_invalid(class_path);
-                        continue;
-                    }
-                    // get class doc from classes sub-collection
-                    const subclass_ref = doc(teacher_classes, class_id);
-                    let subclass_doc = yield getDoc(subclass_ref);
-                    if (!subclass_doc.exists()) {
+                    if (teacher)
+                        rememberClassEmail(class_id, teacher);
+                    const classResult = yield getClassDoc(db, class_id, teacher);
+                    if (!classResult) {
                         yield this.remove_invalid(class_path);
                         continue;
                     }
                     // push class to array
-                    let doc_data = subclass_doc.data();
+                    let doc_data = Object.assign({}, classResult.data);
+                    if (doc_data.archived) {
+                        yield this.remove_invalid(class_path);
+                        continue;
+                    }
+                    // Keep enrollment pointer as id; prefer nested legacy path for writers
                     doc_data.id = class_path;
-                    doc_data.ref = [teacher, class_id].join("/");
+                    doc_data.ref = classResult.legacyPath || class_path;
+                    if (classResult.teacherEmail) {
+                        rememberClassEmail(class_id, classResult.teacherEmail);
+                    }
                     classes.push(doc_data);
                 }
                 _status.log(`📚 Got class docs  | &lt;${run_hash}>`);
@@ -1945,7 +1986,8 @@ export const useMainStore = defineStore({
                     class_data.id = class_doc.id;
                     // if user already in class, change name to "[JOINED] name"
                     class_data.is_joined = (_a = this.active_doc) === null || _a === void 0 ? void 0 : _a.classes.includes([email, class_doc.id].join("/"));
-                    classes.push(class_data);
+                    if (!class_data.archived)
+                        classes.push(class_data);
                 });
                 classes.sort((a, b) => {
                     if (a.period == b.period) {
@@ -2098,6 +2140,21 @@ export const useMainStore = defineStore({
          * @param {Object} repetition The repetition configuration
          * @returns {Promise} A promise that resolves to nothing or rejects with an error
          */
+        normalize_repetition_end(end) {
+            var _a, _b, _d;
+            const normalized = {
+                type: end.type,
+                value: end.type === "date" ? (_a = end.date) !== null &amp;&amp; _a !== void 0 ? _a : end.value : end.value,
+            };
+            if (end.type === "date" &amp;&amp; ((_b = end.date) !== null &amp;&amp; _b !== void 0 ? _b : end.value)) {
+                normalized.date = ((_d = end.date) !== null &amp;&amp; _d !== void 0 ? _d : end.value);
+            }
+            return normalized;
+        },
+        sanitize_repeating_task_updates(updates) {
+            const _a = updates || {}, { ref, id, _class, class_obj, class_id, color } = _a, safeUpdates = __rest(_a, ["ref", "id", "_class", "class_obj", "class_id", "color"]);
+            return safeUpdates;
+        },
         create_repeating_task(task_obj, task_classes, repetition) {
             return __awaiter(this, void 0, void 0, function* () {
                 try {
@@ -2107,8 +2164,9 @@ export const useMainStore = defineStore({
                     else if (!task_classes || task_classes.length == 0) {
                         return Promise.reject("No classes selected");
                     }
+                    const normalizedRepetition = Object.assign(Object.assign({}, repetition), { end: this.normalize_repetition_end(repetition.end) });
                     const createRepeatingTask = httpsCallable(functions, "createRepeatingTask");
-                    const result = yield createRepeatingTask({ task: task_obj, classes: task_classes, repetition });
+                    const result = yield createRepeatingTask({ task: task_obj, classes: task_classes, repetition: normalizedRepetition });
                     const data = result.data;
                     if (data.error)
                         throw data.error;
@@ -2132,8 +2190,9 @@ export const useMainStore = defineStore({
         update_repeating_task(repetition_group_id, updates, scope, task_ref, task_date) {
             return __awaiter(this, void 0, void 0, function* () {
                 try {
+                    const safeUpdates = this.sanitize_repeating_task_updates(updates);
                     const updateRepeatingTask = httpsCallable(functions, "updateRepeatingTask");
-                    const result = yield updateRepeatingTask({ repetition_group_id, updates, scope, task_ref, task_date });
+                    const result = yield updateRepeatingTask({ repetition_group_id, updates: safeUpdates, scope, task_ref, task_date });
                     const data = result.data;
                     if (data.error)
                         throw data.error;
@@ -2154,8 +2213,6 @@ export const useMainStore = defineStore({
                                 if (taskDate &amp;&amp; taskDate &lt; referenceDate)
                                     return task;
                             }
-                            // Apply updates (excluding internal fields)
-                            const { ref, class_id, _class } = updates, safeUpdates = __rest(updates, ["ref", "class_id", "_class"]);
                             return Object.assign(Object.assign({}, task), safeUpdates);
                         });
                         return classInfo;
@@ -2227,17 +2284,50 @@ export const useMainStore = defineStore({
         update_class(class_ref, class_obj) {
             return __awaiter(this, void 0, void 0, function* () {
                 try {
-                    let [_email, _id] = class_ref.split("/");
-                    _email += this.ORG_DOMAIN;
-                    // update the document with the same id as the class from the classes collection
-                    yield updateDoc(doc(db, "classes", _email, "classes", _id), class_obj);
+                    // Strip UI-only fields before write
+                    const _a = class_obj, { _class_id: _c, _teacher_email: _t, _source: _s, _share_ref: _sh, _implied_owner: _i, ref: _r, id: _idField } = _a, write_obj = __rest(_a, ["_class_id", "_teacher_email", "_source", "_share_ref", "_implied_owner", "ref", "id"]);
+                    void _c;
+                    void _t;
+                    void _s;
+                    void _sh;
+                    void _i;
+                    void _r;
+                    void _idField;
+                    const parsed = parseClassId(class_ref, this.ORG_DOMAIN);
+                    let _email = parsed === null || parsed === void 0 ? void 0 : parsed.teacherEmail;
+                    let _id = parsed === null || parsed === void 0 ? void 0 : parsed.classId;
+                    if (!_email &amp;&amp; _id) {
+                        const resolved = yield getClassDoc(db, _id);
+                        _email = resolved === null || resolved === void 0 ? void 0 : resolved.teacherEmail;
+                    }
+                    // Legacy slash path fallback
+                    if (!_email || !_id) {
+                        const parts = class_ref.split("/");
+                        if (parts.length >= 2) {
+                            _email = parts[0].includes("@") ? parts[0] : parts[0] + this.ORG_DOMAIN;
+                            _id = parts[1];
+                        }
+                    }
+                    if (!_email || !_id)
+                        throw "Cannot resolve nested path for class update";
+                    const path = classPath(_email, _id);
+                    // Writers stay on nested email/classId path (source of truth)
+                    yield updateDoc(doc(db, "classes", _email, "classes", _id), write_obj);
                     _status.log("📝 Updated remote class");
+                    if (class_obj.archived) {
+                        yield this.remove_class_id_helper(path);
+                        if (this.loaded_email === _email &amp;&amp; this.loaded_classes !== null) {
+                            this.loaded_classes = this.loaded_classes.filter((c) => c.id === path);
+                        }
+                        _status.log("📝 Archived class");
+                        return Promise.resolve();
+                    }
                     let classes = this.classes;
                     // update local version of class in classes
-                    const classIndex = classes.findIndex((class_obj) => class_obj.id === [_email, _id].join("/"));
+                    const classIndex = classes.findIndex((c) => c.id === path || c._class_id === _id);
                     if (classIndex !== -1) {
                         // Update the class object within the classes array
-                        classes[classIndex] = Object.assign(Object.assign(Object.assign({}, classes[classIndex]), class_obj), { _proxy: true });
+                        classes[classIndex] = Object.assign(Object.assign(Object.assign({}, classes[classIndex]), write_obj), { _proxy: true });
                         _status.log("📝 Updated local class");
                     }
                     // show changes
@@ -2350,20 +2440,37 @@ export const useMainStore = defineStore({
         task_from_ref(ref) {
             return __awaiter(this, void 0, void 0, function* () {
                 try {
-                    let [_email, _id, task_id] = ref.split("/");
-                    _email += this.ORG_DOMAIN;
-                    _status.log("📄 Getting task from ref:", [_email, _id, task_id].join(" - "));
-                    const class_doc = yield getDoc(doc(db, "classes", _email, "classes", _id));
-                    if (!class_doc.exists())
+                    const org = this.ORG_DOMAIN;
+                    let parsed = parseTaskId(ref, org);
+                    // Allow slash form email/classId/taskId without going through ~ join
+                    if (!parsed) {
+                        const parts = splitRefSegments(ref);
+                        if (parts.length === 3) {
+                            parsed = parseTaskId(parts.join("~"), org);
+                        }
+                        else if (parts.length === 2) {
+                            parsed = parseTaskId(parts.join("~"), org);
+                        }
+                    }
+                    if (!parsed)
                         return Promise.resolve(null);
-                    let class_data = class_doc.data();
+                    _status.log("📄 Getting task from ref:", [parsed.teacherEmail, parsed.classId, parsed.taskId].join(" - "));
+                    const classResult = yield getClassDoc(db, parsed.classId, parsed.teacherEmail);
+                    if (!classResult)
+                        return Promise.resolve(null);
+                    let class_data = Object.assign({}, classResult.data);
                     delete class_data.tasks;
                     _status.log("📚 Got class from ref");
-                    const task_doc = yield getDoc(doc(db, "classes", _email, "classes", _id, "tasks", task_id));
-                    if (!task_doc.exists())
+                    const taskResult = yield getTaskDoc(db, parsed.classId, parsed.taskId, parsed.teacherEmail || classResult.teacherEmail);
+                    if (!taskResult)
                         return Promise.resolve(null);
                     _status.log("📄 Got task from ref");
-                    return Promise.resolve(Object.assign(Object.assign({}, task_doc.data()), { ref: ref, class_id: [_email, _id].join("/"), class_name: this.class_text(class_data), _class: Object.assign(Object.assign({}, class_data), { ref: [_email.split(this.ORG_DOMAIN)[0], _id].join("~") }) }));
+                    const email = taskResult.teacherEmail || classResult.teacherEmail;
+                    const nestedClassPath = email ? classPath(email, parsed.classId) : parsed.classId;
+                    const local = email ? email.split("@")[0] : undefined;
+                    const classShareRef = shortShareRef(parsed.classId);
+                    const taskShareRef = shortShareRef(parsed.classId, parsed.taskId);
+                    return Promise.resolve(Object.assign(Object.assign({}, taskResult.data), { ref: email ? buildTaskPath(email, parsed.classId, parsed.taskId) : `${parsed.classId}/${parsed.taskId}`, class_id: nestedClassPath, class_name: this.class_text(class_data), _class: Object.assign(Object.assign({}, class_data), { ref: classShareRef, _share_ref: classShareRef, _teacher_email: email, _class_id: parsed.classId }), _share_ref: taskShareRef, _local_prefix: local }));
                 }
                 catch (err) {
                     return Promise.reject(err);
@@ -2373,22 +2480,57 @@ export const useMainStore = defineStore({
         /**
          * @memberOf .main.actions
          * @function class_from_ref
-         * @description Get the class object from a class reference
+         * @description Get the class object from a class reference (dual-read: flat then nested)
          * @param {String} ref The class reference to get the class object from
          * @returns {Promise} A promise that resolves to the class object or rejects with an error
          */
         class_from_ref(ref_1) {
             return __awaiter(this, arguments, void 0, function* (ref, include_tasks = false) {
                 try {
-                    let [_email, _id] = ref.split("/");
-                    _email += this.ORG_DOMAIN;
-                    const class_doc = yield getDoc(doc(db, "classes", _email, "classes", _id));
-                    _status.log("📄 Got class doc");
-                    if (!class_doc.exists())
+                    const org = this.ORG_DOMAIN;
+                    let parsed = parseClassId(ref, org);
+                    // If ref was task-shaped, take the class portion
+                    if (!parsed) {
+                        const taskParsed = parseTaskId(ref, org);
+                        if (taskParsed) {
+                            parsed = {
+                                classId: taskParsed.classId,
+                                teacherEmail: taskParsed.teacherEmail,
+                                hasTeacherPrefix: !!taskParsed.teacherEmail,
+                            };
+                        }
+                    }
+                    // Slash email/classId without parseClassId teacher when already full email path
+                    if (!parsed) {
+                        const parts = splitRefSegments(ref);
+                        if (parts.length >= 1) {
+                            parsed = parseClassId(parts.slice(0, 2).join("/"), org);
+                        }
+                    }
+                    if (!(parsed === null || parsed === void 0 ? void 0 : parsed.classId))
+                        return Promise.reject("Invalid class ref");
+                    const classResult = yield getClassDoc(db, parsed.classId, parsed.teacherEmail);
+                    _status.log("📄 Got class doc", (classResult === null || classResult === void 0 ? void 0 : classResult.source) || "miss");
+                    if (!classResult)
                         return Promise.reject("Class doesn't exist");
-                    let class_data = class_doc.data();
+                    let class_data = Object.assign({}, classResult.data);
                     if (!include_tasks)
                         delete class_data.tasks;
+                    class_data._class_id = classResult.classId;
+                    class_data._teacher_email = classResult.teacherEmail;
+                    class_data._source = classResult.source;
+                    class_data.ref = classResult.legacyPath || classResult.classId;
+                    class_data._share_ref = shortShareRef(classResult.classId);
+                    // Ensure teachers[] humans-only view helper fields for EditClass
+                    if (!Array.isArray(class_data.teachers) || !class_data.teachers.length) {
+                        if (classResult.teacherEmail &amp;&amp; !isCanvasImportEmail(classResult.teacherEmail)) {
+                            class_data._implied_owner = {
+                                email: classResult.teacherEmail,
+                                name: class_data.teacher_name || classResult.teacherEmail.split("@")[0],
+                                role: "owner",
+                            };
+                        }
+                    }
                     _status.log("📚 Got class data");
                     return Promise.resolve(class_data);
                 }
@@ -2414,13 +2556,16 @@ export const useMainStore = defineStore({
                     if (!class_doc) {
                         class_doc = (yield this.class_from_ref(class_ref));
                     }
-                    let [_email, _id] = class_ref.split("/");
-                    _email += this.ORG_DOMAIN;
-                    let class_snapshot = yield getDoc(doc(db, "classes", _email, "classes", _id));
-                    if (!class_snapshot.exists()) {
+                    const parsed = parseClassId(class_ref, this.ORG_DOMAIN) || {
+                        classId: (class_doc === null || class_doc === void 0 ? void 0 : class_doc._class_id) || splitRefSegments(class_ref).pop() || "",
+                        teacherEmail: class_doc === null || class_doc === void 0 ? void 0 : class_doc._teacher_email,
+                        hasTeacherPrefix: false,
+                    };
+                    const classResult = yield getClassDoc(db, parsed.classId, parsed.teacherEmail || (class_doc === null || class_doc === void 0 ? void 0 : class_doc._teacher_email));
+                    if (!classResult) {
                         throw "Class doesn't exist";
                     }
-                    let class_tasks = ((_a = class_snapshot.data()) === null || _a === void 0 ? void 0 : _a.tasks) || [];
+                    let class_tasks = ((_a = classResult.data) === null || _a === void 0 ? void 0 : _a.tasks) || [];
                     class_tasks = class_tasks.filter((task) => {
                         return task.type != "note" &amp;&amp; compatDateObj(task.date).getTime() >= new Date().getTime();
                     });
@@ -2431,16 +2576,82 @@ export const useMainStore = defineStore({
                     // limit to 6
                     class_tasks = class_tasks.slice(0, 6);
                     let upcoming_tasks = [];
+                    const email = classResult.teacherEmail;
                     class_tasks.forEach((task) => {
                         const task_id = task.id;
                         delete task.id;
-                        upcoming_tasks.push(Object.assign(Object.assign({}, task), { ref: [...class_ref.split("/"), task_id].join("~"), date: compatDateObj(task.date), color: class_doc === null || class_doc === void 0 ? void 0 : class_doc.color, class_id: [_email, _id].join("/"), class_name: this.class_text(class_doc) }));
+                        upcoming_tasks.push(Object.assign(Object.assign({}, task), { ref: shortShareRef(parsed.classId, task_id), date: compatDateObj(task.date), color: class_doc === null || class_doc === void 0 ? void 0 : class_doc.color, class_id: email ? classPath(email, parsed.classId) : parsed.classId, class_name: this.class_text(class_doc) }));
                     });
                     _status.log("📚 Got upcoming tasks");
                     return Promise.resolve(upcoming_tasks);
                 }
                 catch (err) {
                     return Promise.reject(err);
+                }
+            });
+        },
+        /**
+         * Resolve human teachers for EditClass: teachers[] people only, else sole owner from nested email.
+         */
+        teachers_for_class(class_obj, fallbackEmail) {
+            const humans = humanTeachers(class_obj === null || class_obj === void 0 ? void 0 : class_obj.teachers);
+            if (humans.length)
+                return humans;
+            const email = fallbackEmail ||
+                (class_obj === null || class_obj === void 0 ? void 0 : class_obj._teacher_email) ||
+                (typeof (class_obj === null || class_obj === void 0 ? void 0 : class_obj.owner_email) === "string" ? class_obj.owner_email : undefined);
+            if (email &amp;&amp; !isCanvasImportEmail(email)) {
+                return [
+                    {
+                        email,
+                        name: (class_obj === null || class_obj === void 0 ? void 0 : class_obj.teacher_name) || email.split("@")[0],
+                        role: "owner",
+                    },
+                ];
+            }
+            return [];
+        },
+        /**
+         * Persist teacher membership. Always writes nested class doc; also upserts flat teachers[]
+         * / teachers/{email} when a flat classes/{classId} doc exists. Never creates Canvas teacher subdocs.
+         */
+        update_class_teachers(class_ref, teachers) {
+            return __awaiter(this, void 0, void 0, function* () {
+                const parsed = parseClassId(class_ref, this.ORG_DOMAIN);
+                if (!(parsed === null || parsed === void 0 ? void 0 : parsed.classId))
+                    throw "Invalid class ref";
+                const humans = humanTeachers(teachers).filter((t) => !isCanvasImportEmail(t.email));
+                const teacher_emails = humans.map((t) => t.email);
+                // Resolve nested write path — always persist on nested tree (source of truth)
+                let email = parsed.teacherEmail;
+                if (!email) {
+                    const result = yield getClassDoc(db, parsed.classId);
+                    email = result === null || result === void 0 ? void 0 : result.teacherEmail;
+                }
+                if (!email)
+                    throw "Cannot resolve nested teacher email for class write";
+                const nestedRef = doc(db, "classes", email, "classes", parsed.classId);
+                yield updateDoc(nestedRef, { teachers: humans, teacher_emails });
+                // Optional dual-write onto flat doc when it already exists (do not create flat from scratch)
+                if (yield flatClassExists(db, parsed.classId)) {
+                    const flatRef = doc(db, "classes", parsed.classId);
+                    yield updateDoc(flatRef, { teachers: humans, teacher_emails });
+                    for (const person of humans) {
+                        if (isCanvasImportEmail(person.email))
+                            continue;
+                        yield setDoc(doc(db, "classes", parsed.classId, "teachers", person.email), {
+                            email: person.email,
+                            name: person.name || person.email.split("@")[0],
+                            role: person.role || "teacher",
+                        }, { merge: true });
+                    }
+                }
+                // Refresh local classes cache entry if present
+                const path = classPath(email, parsed.classId);
+                const idx = this.classes.findIndex((c) => c.id === path || c.ref === path || c._class_id === parsed.classId);
+                if (idx !== -1) {
+                    this.classes[idx] = Object.assign(Object.assign({}, this.classes[idx]), { teachers: humans, teacher_emails });
+                    this.classes = [...this.classes];
                 }
             });
         },
@@ -2474,4 +2685,4 @@ export const useMainStore = defineStore({
         },
     },
 });
-</code></pre></article></section></div></div></div><div class="search-container" id="PkfLWpAbet" style="display:none"><div class="wrapper" id="iCxFxjkHbP"><button class="icon-button search-close-button" id="VjLlGakifb" aria-label="close search"><svg><use xlink:href="#close-icon"></use></svg></button><div class="search-box-c"><svg><use xlink:href="#search-icon"></use></svg> <input type="text" id="vpcKVYIppa" class="search-input" placeholder="Search..." autofocus></div><div class="search-result-c" id="fWwVHRuDuN"><span class="search-result-c-text">Type anything to view search result</span></div></div></div><div class="mobile-menu-icon-container"><button class="icon-button" id="mobile-menu" data-isopen="false" aria-label="menu"><svg><use xlink:href="#menu-icon"></use></svg></button></div><div id="mobile-sidebar" class="mobile-sidebar-container"><div class="mobile-sidebar-wrapper"><a href="/" class="sidebar-title sidebar-title-anchor">Home</a><div class="mobile-nav-links"></div><div class="mobile-sidebar-items-c"><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-namespaces"><div>Namespaces</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="magic.html">.magic</a></div><div class="sidebar-section-children"><a href="magic.actions.html">actions</a></div><div class="sidebar-section-children"><a href="magic.getters.html">getters</a></div><div class="sidebar-section-children"><a href="magic.state.html">state</a></div><div class="sidebar-section-children"><a href="main.html">.main</a></div><div class="sidebar-section-children"><a href="main.actions.html">actions</a></div><div class="sidebar-section-children"><a href="main.getters.html">getters</a></div><div class="sidebar-section-children"><a href="main.state.html">state</a></div><div class="sidebar-section-children"><a href="notify.html">.notify</a></div><div class="sidebar-section-children"><a href="notify.actions.html">actions</a></div><div class="sidebar-section-children"><a href="notify.getters.html">getters</a></div><div class="sidebar-section-children"><a href="shortcuts.html">.shortcuts</a></div><div class="sidebar-section-children"><a href="shortcuts.actions.html">actions</a></div><div class="sidebar-section-children"><a href="shortcuts.getters.html">getters</a></div><div class="sidebar-section-children"><a href="common.html">common</a></div><div class="sidebar-section-children"><a href="store.html">store</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-global"><div>Global</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="global.html#_log">_log</a></div><div class="sidebar-section-children"><a href="global.html#_status">_status</a></div><div class="sidebar-section-children"><a href="global.html#_statuslog">_statuslog</a></div><div class="sidebar-section-children"><a href="global.html#compatDateObj">compatDateObj</a></div><div class="sidebar-section-children"><a href="global.html#downloadLogData">downloadLogData</a></div><div class="sidebar-section-children"><a href="global.html#getFirstNonStandardCharacter">getFirstNonStandardCharacter</a></div><div class="sidebar-section-children"><a href="global.html#msToTime">msToTime</a></div><div class="sidebar-section-children"><a href="global.html#save">save</a></div><div class="sidebar-section-children"><a href="global.html#state">state</a></div></div></div><div class="mobile-navbar-actions"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div></div></div><script type="text/javascript" src="scripts/core.min.js"></script><script src="scripts/search.min.js" defer="defer"></script><script src="scripts/third-party/fuse.js" defer="defer"></script><script type="text/javascript">var tocbotInstance=tocbot.init({tocSelector:"#eed4d2a0bfd64539bb9df78095dec881",contentSelector:".main-content",headingSelector:"h1, h2, h3",hasInnerContainers:!0,scrollContainer:".main-content",headingsOffset:130,onClick:bringLinkToView})</script></body></html>
+</code></pre></article></section></div></div></div><div class="search-container" id="PkfLWpAbet" style="display:none"><div class="wrapper" id="iCxFxjkHbP"><button class="icon-button search-close-button" id="VjLlGakifb" aria-label="close search"><svg><use xlink:href="#close-icon"></use></svg></button><div class="search-box-c"><svg><use xlink:href="#search-icon"></use></svg> <input type="text" id="vpcKVYIppa" class="search-input" placeholder="Search..." autofocus></div><div class="search-result-c" id="fWwVHRuDuN"><span class="search-result-c-text">Type anything to view search result</span></div></div></div><div class="mobile-menu-icon-container"><button class="icon-button" id="mobile-menu" data-isopen="false" aria-label="menu"><svg><use xlink:href="#menu-icon"></use></svg></button></div><div id="mobile-sidebar" class="mobile-sidebar-container"><div class="mobile-sidebar-wrapper"><div class="mobile-nav-links"></div><div class="mobile-sidebar-items-c"><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-modules"><div>Modules</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="module-common_dualRead.html">common/dualRead</a></div><div class="sidebar-section-children"><a href="module-common_paths.html">common/paths</a></div><div class="sidebar-section-children"><a href="module-common_share.html">common/share</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-namespaces"><div>Namespaces</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="magic.html">.magic</a></div><div class="sidebar-section-children"><a href="magic.actions.html">actions</a></div><div class="sidebar-section-children"><a href="magic.getters.html">getters</a></div><div class="sidebar-section-children"><a href="magic.state.html">state</a></div><div class="sidebar-section-children"><a href="main.html">.main</a></div><div class="sidebar-section-children"><a href="main.actions.html">actions</a></div><div class="sidebar-section-children"><a href="main.getters.html">getters</a></div><div class="sidebar-section-children"><a href="main.state.html">state</a></div><div class="sidebar-section-children"><a href="notify.html">.notify</a></div><div class="sidebar-section-children"><a href="notify.actions.html">actions</a></div><div class="sidebar-section-children"><a href="notify.getters.html">getters</a></div><div class="sidebar-section-children"><a href="shortcuts.html">.shortcuts</a></div><div class="sidebar-section-children"><a href="shortcuts.actions.html">actions</a></div><div class="sidebar-section-children"><a href="shortcuts.getters.html">getters</a></div><div class="sidebar-section-children"><a href="common.html">common</a></div><div class="sidebar-section-children"><a href="store.html">store</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-global"><div>Global</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="global.html#GRAPHEME_FALLBACK">GRAPHEME_FALLBACK</a></div><div class="sidebar-section-children"><a href="global.html#_log">_log</a></div><div class="sidebar-section-children"><a href="global.html#_status">_status</a></div><div class="sidebar-section-children"><a href="global.html#_statuslog">_statuslog</a></div><div class="sidebar-section-children"><a href="global.html#classSquareGlyph">classSquareGlyph</a></div><div class="sidebar-section-children"><a href="global.html#classTextName">classTextName</a></div><div class="sidebar-section-children"><a href="global.html#compatDateObj">compatDateObj</a></div><div class="sidebar-section-children"><a href="global.html#downloadLogData">downloadLogData</a></div><div class="sidebar-section-children"><a href="global.html#firstGrapheme">firstGrapheme</a></div><div class="sidebar-section-children"><a href="global.html#getFirstNonStandardCharacter">getFirstNonStandardCharacter</a></div><div class="sidebar-section-children"><a href="global.html#graphemes">graphemes</a></div><div class="sidebar-section-children"><a href="global.html#isEmojiGrapheme">isEmojiGrapheme</a></div><div class="sidebar-section-children"><a href="global.html#msToTime">msToTime</a></div><div class="sidebar-section-children"><a href="global.html#redirectToShortViewIfNeeded">redirectToShortViewIfNeeded</a></div><div class="sidebar-section-children"><a href="global.html#resolveShortViewRef">resolveShortViewRef</a></div><div class="sidebar-section-children"><a href="global.html#save">save</a></div><div class="sidebar-section-children"><a href="global.html#shortViewFromSlashPath">shortViewFromSlashPath</a></div><div class="sidebar-section-children"><a href="global.html#splitLeadingEmoji">splitLeadingEmoji</a></div><div class="sidebar-section-children"><a href="global.html#state">state</a></div></div></div><div class="mobile-navbar-actions"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div></div></div><script type="text/javascript" src="scripts/core.min.js"></script><script src="scripts/search.min.js" defer="defer"></script><script src="scripts/third-party/fuse.js" defer="defer"></script><script type="text/javascript">var tocbotInstance=tocbot.init({tocSelector:"#eed4d2a0bfd64539bb9df78095dec881",contentSelector:".main-content",headingSelector:"h1, h2, h3",hasInnerContainers:!0,scrollContainer:".main-content",headingsOffset:130,onClick:bringLinkToView})</script></body></html>
